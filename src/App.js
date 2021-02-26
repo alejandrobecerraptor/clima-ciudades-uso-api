@@ -17,8 +17,15 @@ function App() {
 
   useEffect(() => {
     const consultarAPI = async () =>{
-      // http: https://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=61e1c23a6e0c82bb06807b64e6a88405
-      console.log(Funciona)
+
+      if(consultar){
+      const appId = '6aab3d275cd2093538eedd66172b4db1';
+      const url = `https://api.openweathermap.org/data/2.5/weather?q=${ciudad},${pais}&APPID=${appId}`;
+
+      const respuesta = await fetch(url);
+      const resultado = await respuesta.json();
+      
+      }
     }
     consultarAPI();
   }, [consultar])
