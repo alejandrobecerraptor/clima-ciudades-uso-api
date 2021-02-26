@@ -1,7 +1,14 @@
+import {Fragment} from 'react';
+import Header from './components/Header';
 
 function App() {
   return (
-    <h1>Clima Ciudades - React con API</h1>
+    <Fragment>
+        <Header
+          titulo = 'Clima Ciudades - React con API'
+        />
+    </Fragment>
+    
   );
 }
 
